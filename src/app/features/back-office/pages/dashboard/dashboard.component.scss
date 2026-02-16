@@ -1,0 +1,264 @@
+$text-dark: #111827;
+$text-light: #6b7280;
+
+.admin-dashboard {
+    font-family: 'Inter', sans-serif;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    .stat-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+
+            .icon-bg {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &.teal {
+                    background: #e0f2f1;
+                    color: #00897b;
+                }
+
+                &.blue {
+                    background: #e3f2fd;
+                    color: #1e88e5;
+                }
+
+                &.purple {
+                    background: #f3e5f5;
+                    color: #8e24aa;
+                }
+
+                &.green {
+                    background: #e8f5e9;
+                    color: #43a047;
+                }
+            }
+
+            .trend {
+                font-size: 0.8rem;
+                font-weight: 500;
+
+                &.positive {
+                    color: #22c55e;
+                }
+
+                &.warning {
+                    color: #f59e0b;
+                }
+            }
+        }
+
+        .card-content {
+            h2 {
+                font-size: 1.75rem;
+                font-weight: 700;
+                margin: 0;
+                color: $text-dark;
+            }
+
+            p {
+                margin: 0.25rem 0 0 0;
+                font-size: 0.85rem;
+                color: $text-light;
+            }
+        }
+    }
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+
+    .chart-card {
+        background: white;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        padding: 1.5rem;
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+
+            h3 {
+                margin: 0;
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: $text-dark;
+            }
+
+            a {
+                text-decoration: none;
+                color: #0e7c66;
+                font-size: 0.85rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Line Chart Styles
+.line-chart {
+    .graph-container {
+        display: flex;
+        height: 200px;
+
+        .y-axis {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-right: 1rem;
+            font-size: 0.75rem;
+            color: $text-light;
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .plot-area {
+            flex: 1;
+            position: relative;
+            border-bottom: 1px solid #e5e7eb;
+            border-left: 1px solid #e5e7eb;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                overflow: visible;
+            }
+
+            .grid-lines {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                pointer-events: none;
+                z-index: 0;
+
+                .line {
+                    width: 100%;
+                    height: 1px;
+                    background: #f3f4f6;
+
+                    &:last-child {
+                        display: none;
+                    }
+
+                    // Border handle bottom
+                }
+            }
+        }
+    }
+
+    .x-axis {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 40px; // account for y-axis
+        padding-top: 0.5rem;
+        font-size: 0.75rem;
+        color: $text-light;
+        font-weight: 500;
+    }
+}
+
+// Pie Chart Styles
+.chart-body-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 220px;
+
+    .pie-container {
+        position: relative;
+        width: 160px;
+        height: 160px;
+
+        .pie {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .pie-label {
+            position: absolute;
+            top: 20px;
+            left: 10px; // Approximate position for 83%
+            color: #0e7c66;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+    }
+
+    .legend {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: $text-light;
+
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+
+                &.doctors {
+                    background: #0e7c66;
+                }
+
+                &.nurses {
+                    background: #99f6e4;
+                }
+
+                &.patients {
+                    background: #ccfbf1;
+                }
+            }
+        }
+    }
+}
+
+// Stats Grid Responsive
+@media (max-width: 1200px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}

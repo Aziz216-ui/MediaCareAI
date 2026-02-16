@@ -1,0 +1,155 @@
+<div class="admin-dashboard">
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+        <!-- Total Users -->
+        <div class="stat-card">
+            <div class="card-header">
+                <div class="icon-bg teal">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                    </svg>
+                </div>
+                <span class="trend positive">↗ +12%</span>
+            </div>
+            <div class="card-content">
+                <h2>1,500</h2>
+                <p>Total Users</p>
+            </div>
+        </div>
+
+        <!-- New Users -->
+        <div class="stat-card">
+            <div class="card-header">
+                <div class="icon-bg blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25 2.25 2.25 0 004.5 0 2.25 2.25 0 012.25-2.25h1.125a2.25 2.25 0 012.25 2.25v2.25a2.25 2.25 0 01-2.25 2.25H16A2.25 2.25 0 0113.75 18v-2.25" />
+                    </svg>
+                </div>
+                <span class="trend positive">↗ +8%</span>
+            </div>
+            <div class="card-content">
+                <h2>45</h2>
+                <p>New Users This Month</p>
+            </div>
+        </div>
+
+        <!-- Donation Requests -->
+        <div class="stat-card">
+            <div class="card-header">
+                <div class="icon-bg purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                    </svg>
+                </div>
+                <span class="trend warning">① 8 Pending</span>
+            </div>
+            <div class="card-content">
+                <h2>24</h2>
+                <p>Donation Requests</p>
+            </div>
+        </div>
+
+        <!-- Events -->
+        <div class="stat-card">
+            <div class="card-header">
+                <div class="icon-bg green">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                    </svg>
+                </div>
+                <span class="trend positive">↗ +15%</span>
+            </div>
+            <div class="card-content">
+                <h2>12</h2>
+                <p>Events This Month</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-grid">
+        <!-- Line Chart Placeholder -->
+        <div class="chart-card line-chart">
+            <div class="chart-header">
+                <h3>User Growth</h3>
+                <a href="#">View Details</a>
+            </div>
+            <div class="chart-body">
+                <!-- Simple CSS Bar/Line Chart representation -->
+                <div class="graph-container">
+                    <div class="y-axis">
+                        <span>1000</span>
+                        <span>750</span>
+                        <span>500</span>
+                        <span>250</span>
+                        <span>0</span>
+                    </div>
+                    <div class="plot-area">
+                        <!-- SVG Line -->
+                        <svg viewBox="0 0 500 200" preserveAspectRatio="none">
+                            <polyline points="0,150 100,140 200,120 300,100 400,80 500,60" fill="none" stroke="#0e7c66"
+                                stroke-width="3" />
+                            <circle cx="0" cy="150" r="4" fill="white" stroke="#0e7c66" stroke-width="2" />
+                            <circle cx="100" cy="140" r="4" fill="white" stroke="#0e7c66" stroke-width="2" />
+                            <circle cx="200" cy="120" r="4" fill="white" stroke="#0e7c66" stroke-width="2" />
+                            <circle cx="300" cy="100" r="4" fill="white" stroke="#0e7c66" stroke-width="2" />
+                            <circle cx="400" cy="80" r="4" fill="white" stroke="#0e7c66" stroke-width="2" />
+                            <circle cx="500" cy="60" r="4" fill="white" stroke="#0e7c66" stroke-width="2" />
+                        </svg>
+                        <div class="grid-lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="x-axis">
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart Placeholder -->
+        <div class="chart-card pie-chart">
+            <div class="chart-header">
+                <h3>Users by Role</h3>
+            </div>
+            <div class="chart-body-pie">
+                <div class="pie-container">
+                    <!-- CSS Conic Gradient Pie -->
+                    <div class="pie"
+                        style="background: conic-gradient(#0e7c66 0% 83%, #99f6e4 83% 90%, #ccfbf1 90% 100%)"></div>
+                    <div class="pie-label">83%</div>
+                </div>
+                <div class="legend">
+                    <div class="item">
+                        <span class="dot doctors"></span> Doctors
+                    </div>
+                    <div class="item">
+                        <span class="dot nurses"></span> Nurses
+                    </div>
+                    <div class="item">
+                        <span class="dot patients"></span> Patients
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
