@@ -8,6 +8,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { DashboardComponent } from './patient/pages/dashboard/dashboard.component';
 import { SidebarComponent } from './patient/components/sidebar/sidebar.component';
 import { TopbarComponent } from './patient/components/topbar/topbar.component';
+import { DoctorSidebarComponent } from './doctor/components/doctor-sidebar/doctor-sidebar.component';
+import { DoctorTopbarComponent } from './doctor/components/doctor-topbar/doctor-topbar.component';
+import { DoctorDashboardComponent } from './doctor/pages/doctor-dashboard/doctor-dashboard.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { TopbarComponent } from './patient/components/topbar/topbar.component';
     DashboardComponent,
     SidebarComponent,
     TopbarComponent,
+    DoctorSidebarComponent,
+    DoctorTopbarComponent,
+    DoctorDashboardComponent,
     
   ],
   imports: [

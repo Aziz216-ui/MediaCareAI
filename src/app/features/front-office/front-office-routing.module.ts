@@ -4,6 +4,7 @@ import { FrontLayoutComponent } from './layout/front-layout/front-layout.compone
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { DashboardComponent } from './patient/pages/dashboard/dashboard.component';
+import { DoctorDashboardComponent } from './doctor/pages/doctor-dashboard/doctor-dashboard.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,28 @@ const routes: Routes = [
   {
     path: 'patient/dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'doctor/dashboard',
+    component: DoctorDashboardComponent
+  },
+  {
+    path: 'nutritionist',
+    loadChildren: () =>
+      import('./nutritionist/nutritionist.module')
+        .then(m => m.NutritionistModule)
+  },
+  {
+    path: 'laboratory',
+    loadChildren: () =>
+      import('./laboratory/laboratory.module')
+        .then(m => m.LaboratoryModule)
+  },
+  {
+    path: 'home-care',
+    loadChildren: () =>
+      import('./home-care/home-care.module')
+        .then(m => m.HomeCareModule)
   }
 ];
 
