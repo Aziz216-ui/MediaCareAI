@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidebarComponent } from './sidebar.component';
+import { Router } from '@angular/router';
 
 describe('SidebarComponent', () => {
   let component: SidebarComponent;
@@ -21,3 +22,13 @@ describe('SidebarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+export class PatientSidebarComponent {
+
+    constructor(private router: Router) { }
+
+    logout() {
+        this.router.navigate(['/front']);
+    }
+
+}

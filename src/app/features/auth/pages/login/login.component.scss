@@ -68,6 +68,18 @@ $border-color: #e5e7eb;
   margin-bottom: 2rem;
 }
 
+.error-alert {
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+}
+
 // Form Styling
 .login-form {
   margin-bottom: 1.5rem;

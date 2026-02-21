@@ -14,6 +14,11 @@
     <h1 class="welcome-title">Welcome back</h1>
     <p class="welcome-subtitle">Log in to access your health dashboard</p>
 
+    <!-- Error Alert -->
+    <div *ngIf="errorMessage" class="error-alert">
+      {{ errorMessage }}
+    </div>
+
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
 
       <!-- Email Field -->

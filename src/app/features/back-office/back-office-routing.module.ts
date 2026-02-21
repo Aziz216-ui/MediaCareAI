@@ -3,13 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { BackOfficeComponent } from './back-office.component';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuard } from '../../guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: BackOfficeComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], data: { roles: ['ADMIN'] } },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }

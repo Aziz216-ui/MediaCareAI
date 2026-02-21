@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-back-office',
   templateUrl: './back-office.component.html',
-  styleUrl: './back-office.component.scss'
+  styleUrls: ['./back-office.component.scss']
 })
 export class BackOfficeComponent implements OnInit {
   constructor() { }

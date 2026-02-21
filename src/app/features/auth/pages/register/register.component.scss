@@ -106,7 +106,8 @@ $border-color: #e5e7eb;
       }
     }
 
-    input {
+    input,
+    select {
       width: 100%;
       padding: 0.75rem 1rem 0.75rem 2.75rem;
       font-size: 0.95rem;
@@ -115,6 +116,7 @@ $border-color: #e5e7eb;
       border-radius: 10px;
       color: $text-dark;
       transition: all 0.2s ease;
+      appearance: none; // For the select dropdown
 
       &::placeholder {
         color: #9ca3af;
@@ -126,6 +128,14 @@ $border-color: #e5e7eb;
         border-color: $primary-green;
         box-shadow: 0 0 0 3px rgba($primary-green, 0.1);
       }
+    }
+
+    select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
     }
   }
 
