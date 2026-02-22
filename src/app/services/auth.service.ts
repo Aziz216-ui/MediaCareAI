@@ -85,7 +85,7 @@ export class AuthService {
             if (!role) return null;
 
             // Supprimer le préfixe ROLE_ si présent
-            return role.replace(/^ROLE_/, '');
+            return role.replace(/^ROLE_/, '').toUpperCase();
         } catch (error) {
             return null;
         }

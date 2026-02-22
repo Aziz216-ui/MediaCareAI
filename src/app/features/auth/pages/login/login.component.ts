@@ -88,7 +88,6 @@ export class LoginComponent {
         targetRoute = '/front';
         break;
       case 'HOME_CARE_PROVIDER':
-      case 'HOME_CARE':
         targetRoute = '/front/home-care';
         break;
       default:

@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate {
                 return true;
             }
 
-            if (userRole && requiredRoles.includes(userRole)) {
+            if (userRole && requiredRoles.some(role => role.toUpperCase() === userRole.toUpperCase())) {
                 return true;
             }
 

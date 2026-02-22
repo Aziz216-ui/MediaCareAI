@@ -44,16 +44,31 @@ export class RegisterComponent {
   onSubmit() {
     if (this.registerForm.valid) {
       const { terms, ...payload } = this.registerForm.value;
+      console.log('Sending registration payload:', payload);
 
       this.authService.register(payload).subscribe({
-        next: () => {
-          console.log('Registration successful');
+        next: (response) => {
+          console.log('Registration successful! Response:', response);
           this.router.navigate(['/auth/login']);
         },
         error: (err) => {
-          this.errorMessage = err.error?.message || 'Erreur lors de l\'inscription';
+          console.error('Registration failed error detail:', err);
+          // Si le backend renvoie du texte/JSON direct, essayons de l'extraire
+          let msg = 'Erreur lors de l\'inscription';
+          if (err.error) {
+            try {
+              // Parfois err.error est un objet JSON stringifié quand responseType est text
+              const parsed = JSON.parse(err.error);
+              msg = parsed.message || msg;
+            } catch (e) {
+              msg = err.error || msg;
+            }
+          }
+          this.errorMessage = msg;
         }
       });
+    } else {
+      console.warn('Register form is invalid:', this.registerForm.value);
     }
   }
 }
